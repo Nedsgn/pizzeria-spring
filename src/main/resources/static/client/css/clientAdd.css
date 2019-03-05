@@ -1,0 +1,57 @@
+
+
+@charset "UTF-8";
+
+h1{
+	margin:0 auto;
+	text-align:center;
+	color:#ff4fbb;
+	border: 5px dotted #b3b3ff;
+	width:20%;
+	margin-bottom:3%;
+}
+img {
+	display:block;
+	margin:0 auto;
+	width:150px;
+	height:150px;
+	margin-bottom:3%;
+}
+form{
+	width:60%;
+	margin:0 auto;
+}
+
+fieldset{
+	border:1px solid #b0b0ff;
+	border-radius:5px;
+		text-align:center;
+		padding:3%;
+}
+
+input{
+		border:1px solid #ff4fbb;
+		border-radius:10px;
+		width:70%;
+		margin-left:2%;
+		margin-bottom:1%;
+	
+}
+label {
+	display:inline-block;
+	width:80px;
+	color:#ff4fbb;
+	
+}
+
+.btn{
+	background-color:#ff4fbb;
+	width:8%;
+	padding:5px;
+	color:white;
+	margin: 0 auto;
+}
+
+.btn:hover{
+	background-color:#b3b3ff;
+}

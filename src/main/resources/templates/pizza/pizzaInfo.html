@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Pizza Infos</title>
+<link rel="stylesheet" th:href="@{css/pizzaInfo.css}"/>
+<link rel="stylesheet" th:href="@{webjars/font-awesome/4.7.0/css/font-awesome.min.css}"/> 
+</head>
+<body>
+	
+<h1>Pizza&Hungry, votre Pizza 100% miam ! </h1>
+<h2>
+Livraison gratuite dès 12€ d'achats</h2>
+<img class="logo" alt="pizza" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjyP2hLnRnlvMlLiMHqL0ZEgC5HLAgHGDNsvZap_F4jgmHird"/>
+
+
+	<a class="button" th:href="@{pizza-supprimer(id=${pizzaInfos.id})}">Supprimer une pizza</a>
+	<a class="button" th:href="@{pizza-modifier(id=${pizzaInfos.id})}">Modifier pizza</a>
+	<h2 th:text="${pizzaInfos.libelle}">
+
+	</h2>
+	<div class="container">
+<i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+		
+	
+			<img alt="" th:src="${pizzaInfos.urlImg}">
+		<ul>
+		<li>	Prix : <span th:text="${pizzaInfos.prix}"></span>€</li>
+			<li>	description : <span th:text="${pizzaInfos.description}"></span></li>	
+				<li>	stock : <span th:text="${pizzaInfos.stock}"></span></li>
+				<li>	reference : <span th:text="${pizzaInfos.reference}"></span></li>
+		
+		</ul>
+</div>
+
+<a class="btn" th:href="@{pizza-accueil}">Retour</a>
+</body>
+</html>

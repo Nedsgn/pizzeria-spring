@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Info</title>
+<link rel="stylesheet" th:href="@{client/css/clientInfo.css}"/>
+</head>
+<body>
+
+
+
+	<a class="button" th:href="@{client-supprimer(id=${clientInfos.id})}">Supprimer un client</a>
+	<a class="button" th:href="@{client-modifier(id=${clientInfos.id})}">Modifier un client</a>
+				<h1 ><span th:text="${clientInfos.nom}"></span>
+										<span th:text="${clientInfos.prenom}"></span></h1>
+	<div class="container">
+
+
+	
+			<img alt="" th:src="${clientInfos.photo}">
+			
+		<ul>
+		<li>	Nom : <span th:text="${clientInfos.nom}"></span></li>
+			<li>	Prénom : <span th:text="${clientInfos.prenom}"></span></li>
+			<li>	Code postal : <span th:text="${clientInfos.code_postal}"></span></li>	
+				<li>Ville : <span th:text="${clientInfos.ville}"></span></li>
+				<li>	Date de naissance : <span th:text="${clientInfos.date_naissance}"></span></li>
+					<li>	Email : <span th:text="${clientInfos.email}"></span></li>
+						
+		
+		</ul>
+</div>
+
+<a class="btn" th:href="@{client-accueil}">Retour</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Pizza accueil</title>
+<link rel="stylesheet" th:href="@{css/pizzaAccueil.css}"/>
+
+</head>
+<body>
+
+
+
+<h1>Pizza&Hungry, votre Pizza 100% miam ! </h1>
+<h2>
+Livraison gratuite dès 12€ d'achats</h2>
+<img class="logo" alt="pizza" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjyP2hLnRnlvMlLiMHqL0ZEgC5HLAgHGDNsvZap_F4jgmHird"/>
+
+	<a class="button" th:href="@{pizza-ajouter}">Ajouter une pizza</a>
+	
+
+
+
+	<div class="container" >
+		<div class="block" th:each="pizza :${pizzas}">
+	
+	
+			<h2 th:text="${pizza.libelle}"></h2>
+			<div class="prix">
+			<label  th:text="${pizza.prix}"></label>€
+			</div>
+			<a th:href="@{pizza-info(id=${pizza.id}) }"><img th:src="${pizza.urlImg}"/></a>
+		
+
+        </div>
+	</div>
+</body>
+</html>

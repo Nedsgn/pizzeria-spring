@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Client Ajouter</title>
+<link rel="stylesheet" th:href="@{client/css/clientAdd.css}"/>
+
+</head>
+<body>
+<h1>Ajouter utilisateur</h1>
+	<img alt="user" src="img/ico.svg"/>
+		<form th:action="@{add-client}" method="POST" th:object="${clientAdd}"> <!-- l'adresse qu'on a mi dans l'action est celle qu'on a mi dans le controller afin de recuperer les données -->
+		<fieldset>
+		
+				<label for="nom">Nom :</label>
+				<input type="text" name="nom" id="nom" th:field="*{nom}"/>
+				<br/>
+				<label for="prenom">Prénom :</label>
+				<input type="text" name="prenom" id="prenom" th:field="*{prenom}"/>
+				<br/>
+				<label for="date">Date de naissance :</label>
+				<input type="date" name="date_naissance" id="date_naissance" th:field="*{date_naissance}"/>
+				<br/>
+				<label for="ville">Ville :</label>
+				<input type="text" name="ville" id="ville" th:field="*{ville}"/>
+				<br/>
+				<label for="adresse">Adresse :</label>
+				<input type="text" name="adresse" id="adresse" th:field="*{adresse}"/>
+				<br/>
+				<label for="code_postal">Code postal :</label>
+				<input type="text" name="code_postal" id="code_postal" th:field="*{code_postal}"/>
+				<br/>
+				<label for="email">Email :</label>
+				<input type="email" name="email" id="email" th:field="*{email}"/>
+				<br/>
+				
+				<label for="photo">Url photo :</label>
+				<input type="text" name="photo" id="photo" th:field="*{photo}"/>
+				<br/>
+	<input class="btn" type="reset"/>
+<input class="btn" type="submit"/>
+		</fieldset>
+
+		</form>
+		
+	<a class ="btn" th:href="@{utilisateur-accueil}">retour</a>
+</body>
+</html>

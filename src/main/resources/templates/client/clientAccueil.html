@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Client</title>
+<link rel="stylesheet" th:href="@{client/css/clientAccueil.css}"/>
+</head>
+<body>
+
+	<h1>Utilisateurs
+		Accueil</h1>
+	<h2><a 
+		th:href="@{client-ajouter}"
+	>Ajouter un
+		utilisateur</a></h2>
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Nom</th>
+			<th>Prenom</th>
+			<th>Date de naissance</th>
+			<th>Adresse</th>
+			<th>Code postal</th>
+			<th>Ville</th>
+			<th>Email</th>
+			
+		</tr>
+		<tr
+			th:each="c : ${ client}"
+		>
+
+			<td
+				th:text="${c.id}"
+			></td>
+			<td
+				th:text="${c.nom}"
+			></td>
+			<td
+				th:text="${c.prenom}"
+			></td>
+			<td
+				th:text="${c.date_naissance}"
+			></td>
+			<td
+				th:text="${c.adresse}"
+			></td>
+			<td
+				th:text="${c.code_postal}"
+			></td>
+			<td
+				th:text="${c.ville}"
+			></td>
+			
+			<td
+				th:text="${c.email}"
+			></td>
+			
+			
+			
+			<td><a
+				class="btn"
+				th:href="@{client-info(id=${c.id})}"
+			> ♥ Voir</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>

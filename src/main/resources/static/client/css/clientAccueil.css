@@ -1,0 +1,39 @@
+@charset "UTF-8";
+*{
+	font-family: fantasy;
+}
+
+h1 {
+	margin:0 auto;
+	text-align:center;
+	color:#ff8080;
+	border: 5px dotted #b3b3ff;
+	width:20%;
+	margin-bottom:3%;
+}
+h2 a{
+	text-align:center;
+}
+
+table, td, tr, th{
+	border: 1px solid #ff8080;
+	border-collapse: collapse;
+	margin:0 auto;
+	padding:10px;
+}
+
+th{
+	color:#ff8080;
+}
+
+tr:nth-child(2n){
+	background-color:#fff0f0;
+}
+
+.btn{
+	color:#008000;
+	
+	text-decoration: none;
+	font-weight:bold;
+	text-align:center;
+}

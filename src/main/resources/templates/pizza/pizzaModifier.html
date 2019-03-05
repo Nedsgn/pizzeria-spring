@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/pizzaAjout.css}"/>
+
+</head>
+<body>
+<div class="container">
+		<img alt=""
+			src="https://cdn0.iconfinder.com/data/icons/restaurant-53/64/Food-junk-pizza-fast_food-512.png">
+		
+		<form th:action="@{modifier}" method="post" th:object="${pizzaInfos}">
+			<fieldset>
+				<legend>Modifier une pizza</legend>
+				<p>
+					<input type="text" id="id"
+						name="id" th:value="${pizzaInfos.id }" hidden />
+				</p>
+				
+				<p>
+					<label for="libelle">Libelle :</label> <input type="text"
+						id="libelle" name="libelle" th:value="${pizzaInfos.libelle }" />
+				</p>
+				<p>
+					<label for="libelle">Référence :</label> <input type="text"
+						id="reference" name="reference" th:value="${pizzaInfos.reference }" />
+				</p>
+				<p>
+					<label for="prix">Prix :</label> <input type="text" id="prix"
+						name="prix" th:value="${pizzaInfos.prix }" />
+				</p>
+				<p>
+					<label for="description">Description :</label> <input type="text"
+						id="description" name="description"
+						th:value="${pizzaInfos.description }" />
+				</p>
+				<p>
+					<label for="stock">Stock :</label> <input type="text" id="stock"
+						name="stock" th:value="${pizzaInfos.stock }" />
+				</p>
+				<p>
+					<label for="photo">Url de la photo :</label> <input type="text" id="urlImg"
+						name="urlImg" th:value="${pizzaInfos.urlImg }" />
+				</p>
+
+			</fieldset>
+			<p class="button">
+				<input type="reset"> <input type="submit">
+			</p>
+		</form>
+
+<a href="pizza-info">Retour</a>
+<a href="pizza-accueil">Accueil</a>
+	</div>
+</body>
+</html>

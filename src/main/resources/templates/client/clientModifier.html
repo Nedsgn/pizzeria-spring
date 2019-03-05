@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{client/css/clientAdd.css}"/>
+</head>
+<body>
+	<h1>Modifier utilisateur</h1>
+	
+		<img alt="clientAdd" src="img/ico.svg"/>
+		
+	<form th:action="@{modifier-client}" method="POST" th:object="${clientInfo}">
+	
+		<fieldset>
+		
+				<input hidden="hidden" type="text" name="id" id="id" th:value="${clientInfo.id}"  />
+				<label for="nom">Nom :</label>
+				<input type="text" name="nom" id="nom" th:value="${clientInfo.nom}" />
+				<br/>
+				<label for="prenom">Prénom :</label>
+				<input type="text" name="prenom" id="prenom" th:value="${clientInfo.prenom}" />
+				<br/>
+				<label for="date_naissance">date_naissance :</label>
+				<input type="date" name="date_naissance" id="date_naissance" th:value="${clientInfo.date_naissance}" />
+				<br/>
+				<label for="adresse">Adresse :</label>
+				<input type="text" name="adresse" id="adresse" th:value="${clientInfo.adresse}"/>
+				<label for="code_postal">Code postal</label>
+				<input type="text" name="code_postal" id="code_postal" th:value="${clientInfo.code_postal}" />
+				<br/>
+				<label for="email">Email :</label>
+				<input type="email" name="email" id="email" th:value="${clientInfo.email}" />
+				<br/>
+				<label for="ville">Ville:</label>
+				<input type="text" name="ville" id="ville" th:value="${clientInfo.ville}" />
+				<br/>
+				<label for="photo">Url photo :</label>
+				<input type="text" name="photo" id="photo" th:value="${clientInfo.photo}" />
+				<br/>
+			<input class="btn" type="reset"/>
+			<input class="btn" type="submit"/>
+		</fieldset>
+
+		</form>
+		
+	<a class ="btn" th:href="@{utilisateur-accueil}">retour</a>
+</body>
+</html>

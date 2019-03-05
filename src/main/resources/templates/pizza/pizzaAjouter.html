@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pizza Ajouter</title>
+<link rel="stylesheet" th:href="@{css/pizzaAjout.css}"/>
+
+</head>
+<body>
+<h1>Ajouter une pizza</h1>
+
+	<img class="logo" alt="user" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjyP2hLnRnlvMlLiMHqL0ZEgC5HLAgHGDNsvZap_F4jgmHird"/>
+	
+
+	<div class="container">
+
+		
+		<form th:action="@{pizza-add}" method="post" th:object="${pizzas}">>
+			<fieldset>
+				<legend>Ajout d'une nouvelle pizza</legend>
+				
+					
+				<p>
+					<label for="libelle">Libelle :</label> <input type="text"
+						id="libelle" name="libelle" th:field="*{libelle}" />
+				</p>
+				<p>
+					<label for="libelle">Référence :</label> <input type="text"
+						id="reference" name="reference" th:field="*{reference}" />
+				</p>
+				<p>
+					<label for="prix">Prix :</label> <input type="text" id="prix"
+						name="prix" th:field="*{prix}" />
+				</p>
+				<p>
+					<label for="description">Description : </label> <input type="text"
+						id="description" name="description"
+						th:field="*{description}" />
+				</p>
+				<p>
+					<label for="stock">Stock</label> <input type="text" id="stock"
+						name="stock" th:field="*{stock}" />
+				</p>
+				<p>
+					<label for="photo">Photo</label> <input type="text" id="urlImg"
+						name="urlImg" placeholder="Votre url image" /> <input type="file"
+						id="photo" name="photo" accept="image/png, image/jpeg" />
+				</p>
+
+			</fieldset>
+			<p class="button">
+				<input type="reset"> <input type="submit">
+			</p>
+		</form>
+
+
+<a href="accueil">Retour</a>
+	</div>
+</body>
+</html>
